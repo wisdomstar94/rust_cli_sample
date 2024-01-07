@@ -5,7 +5,7 @@ use clap::Parser;
 #[command(bin_name = "cargo")]
 enum Cli {
     // Subcommands...
-    New(NewArgs),
+    New(NewArgs), 
     Check(CheckArgs),
 }
 
@@ -13,14 +13,16 @@ enum Cli {
 #[command(author, version, about, long_about = None)]
 struct NewArgs {
     #[arg(short, long)]
-    name: String,
+    name: Option<String>,
+    #[arg(short, long)]
+    time: Option<u32>,
 }
 
 #[derive(clap::Args)]
 #[command(author, version, about, long_about = None)]
 struct CheckArgs {
     #[arg(short, long)]
-    time: u32,
+    time: Option<u32>,
 }
 
 pub fn run() {
@@ -30,6 +32,7 @@ pub fn run() {
         Cli::New(args) => {
             println!("new 커맨드 실행됨!");
             println!("{:?}", args.name);
+            println!("{:?}", args.time);
         },
         Cli::Check(args) => {
             println!("check 커맨드 실행됨!");
