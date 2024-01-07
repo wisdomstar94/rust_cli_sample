@@ -1,7 +1,11 @@
 #[derive(clap::Args)]
-#[command(author, version, about, long_about = None)]
+#[command(
+  about="테스트용 check 커맨드 입니다.", 
+  long_about = None)
+]
 pub struct CliArgs {
-    #[arg(short, long)]
+    /// 시간을 입력하세요
+    #[arg(short='t', long="time")]
     time: Option<u32>,
 }
 
