@@ -11,6 +11,7 @@ enum Cli {
     Check(sub_commands::c_check::CliArgs), 
     Move(sub_commands::c_move::CliArgs),
     Copy(sub_commands::c_copy::CliArgs),
+    Mkdir(sub_commands::c_mkdir::CliArgs),
 }
 
 pub fn run() {
@@ -20,5 +21,6 @@ pub fn run() {
         Cli::Check(args) => sub_commands::c_check::run(args),
         Cli::Move(args) => sub_commands::c_move::run(args),
         Cli::Copy(args) => sub_commands::c_copy::run(args),
+        Cli::Mkdir(args) => sub_commands::c_mkdir::run(args),
     }
 }
