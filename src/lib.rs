@@ -12,6 +12,7 @@ enum Cli {
     Move(sub_commands::c_move::CliArgs),
     Copy(sub_commands::c_copy::CliArgs),
     Mkdir(sub_commands::c_mkdir::CliArgs),
+    Wdir(sub_commands::c_wdir::CliArgs),
 }
 
 pub fn run() {
@@ -22,5 +23,6 @@ pub fn run() {
         Cli::Move(args) => sub_commands::c_move::run(args),
         Cli::Copy(args) => sub_commands::c_copy::run(args),
         Cli::Mkdir(args) => sub_commands::c_mkdir::run(args),
+        Cli::Wdir(args) => sub_commands::c_wdir::run(args),
     }
 }
