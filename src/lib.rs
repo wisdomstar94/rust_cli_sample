@@ -9,6 +9,7 @@ enum Cli {
     // Subcommands...
     New(sub_commands::c_new::CliArgs), 
     Check(sub_commands::c_check::CliArgs), 
+    Move(sub_commands::c_move::CliArgs),
 }
 
 pub fn run() {
@@ -16,5 +17,6 @@ pub fn run() {
     match parse_cli {
         Cli::New(args) => sub_commands::c_new::run(args),
         Cli::Check(args) => sub_commands::c_check::run(args),
+        Cli::Move(args) => sub_commands::c_move::run(args),
     }
 }
