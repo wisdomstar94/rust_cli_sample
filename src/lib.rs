@@ -14,6 +14,7 @@ enum Cli {
     Mkdir(sub_commands::c_mkdir::CliArgs),
     Wdir(sub_commands::c_wdir::CliArgs),
     Pathjoin(sub_commands::c_pathjoin::CliArgs),
+    Fdlist(sub_commands::c_fdlist::CliArgs),
 }
 
 pub fn run() {
@@ -26,5 +27,6 @@ pub fn run() {
         Cli::Mkdir(args) => sub_commands::c_mkdir::run(args),
         Cli::Wdir(args) => sub_commands::c_wdir::run(args),
         Cli::Pathjoin(args) => sub_commands::c_pathjoin::run(args),
+        Cli::Fdlist(args) => sub_commands::c_fdlist::run(args),
     }
 }
