@@ -1,4 +1,4 @@
-use std::env;
+use library::get_current_working_directory_path;
 
 #[derive(clap::Args)]
 #[command(
@@ -9,9 +9,7 @@ pub struct CliArgs {}
 
 pub fn run(_: CliArgs) {
   println!("wdir 커맨드 실행됨!");
-  if let Ok(path) = env::current_dir() {
-    if let Some(p) = path.to_str() {
-      println!("current working directory path = {:?}", p);
-    }
+  if let Some(path) = get_current_working_directory_path() {
+    println!("current working directory path = {:?}", path);
   }
 }

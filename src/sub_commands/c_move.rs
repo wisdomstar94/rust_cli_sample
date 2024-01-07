@@ -9,13 +9,13 @@ ex) 폴더 이동시 : rust_cli_sample move --before=\"./my_folder\" --after=\".
   long_about = None)
 ]
 pub struct CliArgs {
-    /// 이동할 파일 또는 폴더 경로를 입력하세요
-    #[arg(short='b', long)]
-    before: Option<String>,
+  /// 이동할 파일 또는 폴더 경로를 입력하세요
+  #[arg(short='b', long)]
+  before: Option<String>,
 
-    /// 새롭게 위치할 파일 또는 폴더 경로를 입력하세요
-    #[arg(short='a', long)]
-    after: Option<String>,
+  /// 새롭게 위치할 파일 또는 폴더 경로를 입력하세요
+  #[arg(short='a', long)]
+  after: Option<String>,
 }
 
 pub fn run(args: CliArgs) {
@@ -34,12 +34,12 @@ pub fn run(args: CliArgs) {
     println!("after is {}", after);
     let result = fs::rename(before, after);
     match result {
-        Ok(_) => {
-          println!("****** move 성공!");
-        },
-        Err(error) => {
-          println!("****** move 실패! : {:?}", error);
-        },
+      Ok(_) => {
+        println!("****** move 성공!");
+      },
+      Err(error) => {
+        println!("****** move 실패! : {:?}", error);
+      },
     }
   }
 }

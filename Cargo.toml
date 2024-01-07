@@ -5,3 +5,7 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "4.4.12", features = ["derive"] }
+library = { path = "./library" }
+
+[workspace]
+members = ["library"]

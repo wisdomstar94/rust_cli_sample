@@ -1,4 +1,4 @@
-use std::path::{Path, PathBuf};
+use library::path_join;
 
 #[derive(clap::Args)]
 #[command(
@@ -28,13 +28,4 @@ pub fn run(args: CliArgs) {
       println!("joined_path = {:?}", joined_path);
     }
   }
-}
-
-fn path_join(vec: &Vec<String>) -> PathBuf {
-  let path_obj = Path::new("");
-  let mut path_buffer = path_obj.join("");
-  for item in vec {
-    path_buffer = path_buffer.join(item);
-  }
-  path_buffer
 }
