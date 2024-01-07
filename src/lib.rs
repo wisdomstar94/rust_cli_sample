@@ -13,6 +13,7 @@ enum Cli {
     Copy(sub_commands::c_copy::CliArgs),
     Mkdir(sub_commands::c_mkdir::CliArgs),
     Wdir(sub_commands::c_wdir::CliArgs),
+    Pathjoin(sub_commands::c_pathjoin::CliArgs),
 }
 
 pub fn run() {
@@ -24,5 +25,6 @@ pub fn run() {
         Cli::Copy(args) => sub_commands::c_copy::run(args),
         Cli::Mkdir(args) => sub_commands::c_mkdir::run(args),
         Cli::Wdir(args) => sub_commands::c_wdir::run(args),
+        Cli::Pathjoin(args) => sub_commands::c_pathjoin::run(args),
     }
 }
