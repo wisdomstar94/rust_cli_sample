@@ -2,10 +2,9 @@ use std::fs;
 
 #[derive(clap::Args)]
 #[command(
-  about="\n
-파일 또는 폴더를 다른 경로로 이동시키는 커맨드입니다.
-ex) 파일 이동시 : rcs move --before=\"./zz.txt\" --after=\"./src/zz.txt\"
-ex) 폴더 이동시 : rcs move --before=\"./my_folder\" --after=\"./src/my_folder\"
+  about="파일 또는 폴더를 다른 경로로 이동시키는 커맨드입니다.
+ex) 파일 이동시 : rust_cli_sample move --before=\"./zz.txt\" --after=\"./src/zz.txt\"
+ex) 폴더 이동시 : rust_cli_sample move --before=\"./my_folder\" --after=\"./src/my_folder\"
   ", 
   long_about = None)
 ]

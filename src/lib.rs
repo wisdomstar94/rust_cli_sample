@@ -2,8 +2,8 @@ use clap::Parser;
 mod sub_commands;
 
 #[derive(Parser)] // requires `derive` feature
-#[command(name = "rcs")]
-#[command(bin_name = "rcs")]
+#[command(name = "rust_cli_sample")]
+#[command(bin_name = "rust_cli_sample")]
 #[command(about = "*************************************\n********** 러스트 cli 샘플 **********\n*************************************")]
 enum Cli {
     // Subcommands...
