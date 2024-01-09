@@ -16,6 +16,7 @@ enum Cli {
     Pathjoin(sub_commands::c_pathjoin::CliArgs),
     Fdlist(sub_commands::c_fdlist::CliArgs),
     Exist(sub_commands::c_exist::CliArgs),
+    Mkfile(sub_commands::c_mkfile::CliArgs),
 }
 
 pub fn run() {
@@ -30,5 +31,6 @@ pub fn run() {
         Cli::Pathjoin(args) => sub_commands::c_pathjoin::run(args),
         Cli::Fdlist(args) => sub_commands::c_fdlist::run(args),
         Cli::Exist(args) => sub_commands::c_exist::run(args),
+        Cli::Mkfile(args) => sub_commands::c_mkfile::run(args),
     }
 }
