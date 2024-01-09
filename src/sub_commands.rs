@@ -6,3 +6,4 @@ pub mod c_mkdir;
 pub mod c_wdir;
 pub mod c_pathjoin;
 pub mod c_fdlist;
+pub mod c_exist;

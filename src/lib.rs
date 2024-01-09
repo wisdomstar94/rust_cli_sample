@@ -15,6 +15,7 @@ enum Cli {
     Wdir(sub_commands::c_wdir::CliArgs),
     Pathjoin(sub_commands::c_pathjoin::CliArgs),
     Fdlist(sub_commands::c_fdlist::CliArgs),
+    Exist(sub_commands::c_exist::CliArgs),
 }
 
 pub fn run() {
@@ -28,5 +29,6 @@ pub fn run() {
         Cli::Wdir(args) => sub_commands::c_wdir::run(args),
         Cli::Pathjoin(args) => sub_commands::c_pathjoin::run(args),
         Cli::Fdlist(args) => sub_commands::c_fdlist::run(args),
+        Cli::Exist(args) => sub_commands::c_exist::run(args),
     }
 }

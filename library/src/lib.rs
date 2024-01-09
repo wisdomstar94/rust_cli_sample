@@ -34,3 +34,10 @@ pub fn get_dir_entry_list(target_folder_path: String) -> Result<Vec<DirEntry>, E
     Err(error) => Err(error),
   }
 }
+
+pub fn is_exist(path: &Path) -> bool {
+  match fs::metadata(path) {
+    Ok(_) => true,
+    Err(_) => false,
+  }
+}
